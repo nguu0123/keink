@@ -22,7 +22,6 @@ func NewProvider(options ...cluster.ProviderOption) *Provider {
 	return &Provider{
 		ProviderWrapper: p,
 	}
-
 }
 
 func (p *Provider) CreateKubeEdge(name string, options ...CreateOption) error {
@@ -87,8 +86,6 @@ func PreProcessClusterOptions(opts *internalcreate.ClusterOptions) {
 				opts.ClusterOptions.Config.Nodes[index].Labels = make(map[string]string)
 			}
 			opts.ClusterOptions.Config.Nodes[index].Labels[shareddocker.EdgeNodeLabelKey] = shareddocker.EdgeNodeLabelValue
-			break
 		}
 	}
-
 }

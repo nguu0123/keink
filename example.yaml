@@ -24,6 +24,6 @@ nodes:
   # the control plane node config
   - role: control-plane
   # the workers
-  - role: worker
   # the edge nodes(KubeEdge edgecore)
+  - role: edge-node
   - role: edge-node
