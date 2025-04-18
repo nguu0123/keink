@@ -33,3 +33,8 @@ verify:
 # code linters
 lint:
 	hack/make-rules/verify/lint.sh
+
+INSTALL_DIR ?= $(HOME)/.local/bin
+
+install: keink
+	cp "$(OUT_DIR)/$(KIND_BINARY_NAME)" "$(INSTALL_DIR)/$(KIND_BINARY_NAME)"
